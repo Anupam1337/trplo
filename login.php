@@ -28,7 +28,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Log In</title>
-    <script src="https://web.freshchat.com/js/widget.js"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -156,43 +155,5 @@
     </div>
 
 </body>
-<script>
-    function initFreshChat() {
-        window.fcWidget.init({
-            token: "6c00161d-7b41-4cd5-a2eb-c0ee52f20e73",
-            host: "https://wchat.freshchat.com"
-        });
-    }
-
-    function initialize(i, t) {
-        var e;
-        i.getElementById(t) ? initFreshChat() : ((e = i.createElement("script")).id = t,
-            e.async = !0,
-            e.src = "https://wchat.freshchat.com/js/widget.js",
-            e.onload = initFreshChat,
-            i.head.appendChild(e))
-    }
-
-    function initiateCall() {
-        initialize(document, "freshchat-js-sdk")
-    }
-    window.addEventListener ? window.addEventListener("load", initiateCall, !1) : window.attachEvent("load", initiateCall, !1);
-    // Copy the below lines under window.fcWidget.init inside initFreshChat function in the above snippet
-
-    // To set unique user id in your system when it is available
-    window.fcWidget.setExternalId("john.doe1987");
-
-    // To set user name
-    window.fcWidget.user.setFirstName("John");
-
-    // To set user email
-    window.fcWidget.user.setEmail("john.doe@gmail.com");
-
-    // To set user properties
-    window.fcWidget.user.setProperties({
-        plan: "Estate", // meta property 1
-        status: "Active" // meta property 2
-    });
-</script>
 
 </html>
